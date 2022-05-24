@@ -20,8 +20,6 @@ class NotesAdapter(facturas: ArrayList<Factura>, context: Context) :
     val facturas = facturas
     val context = context
 
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotesViewHolder {
         return NotesViewHolder(
             LayoutInflater.from(this.context).inflate(R.layout.note_item, parent, false)

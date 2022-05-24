@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/popup_window_background"
     android:layout_width="260dp"
     android:layout_height="180dp"
     android:layout_gravity="center"
-    tools:context=".NoteDetail"
-    android:background="@drawable/cerclebackground">
-
+    android:background="@drawable/cerclebackground"
+    tools:context=".NoteDetail">
 
     <ImageView
         android:layout_width="252dp"
@@ -19,8 +17,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/popup_window_view_with_border"
@@ -93,15 +90,14 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-
                 <Button
                     android:id="@+id/popup_window_button"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="#406711"
-                    android:text="Cerrar"
                     android:gravity="center|top"
+                    android:text="Cerrar"
                     android:textAllCaps="false"
                     android:textColor="#FFFFFF"
                     android:textSize="19sp"
@@ -118,49 +114,48 @@
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-<!--
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_weight="100"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".NoteDetail">
-
-
-    <TextView
-        android:id="@+id/titulo"
-        android:layout_width="279dp"
-        android:layout_height="50dp"
-        android:layout_weight="15"
-        android:gravity="center|bottom"
-        android:text="Información"
-        android:textSize="40sp"
-        android:textStyle="bold" />
+    <!--
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="100"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".NoteDetail">
 
 
-    <TextView
-        android:id="@+id/contenido"
-        android:layout_width="387dp"
-        android:layout_height="25dp"
-        android:layout_weight="5"
-        android:gravity="center"
-        android:text="Esta funcionalidad no está disponible"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="279dp"
+            android:layout_height="50dp"
+            android:layout_weight="15"
+            android:gravity="center|bottom"
+            android:text="Información"
+            android:textSize="40sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/cierre"
-        android:layout_width="369dp"
-        android:layout_height="0dp"
-        android:layout_weight="80"
-        android:paddingLeft="33dp"
-        android:paddingTop="8dp"
-        android:text="Cerrar"
-        android:textSize="18sp" />
 
-</LinearLayout>
--->
+        <TextView
+            android:id="@+id/contenido"
+            android:layout_width="387dp"
+            android:layout_height="25dp"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:text="Esta funcionalidad no está disponible"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/cierre"
+            android:layout_width="369dp"
+            android:layout_height="0dp"
+            android:layout_weight="80"
+            android:paddingLeft="33dp"
+            android:paddingTop="8dp"
+            android:text="Cerrar"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+    -->
 

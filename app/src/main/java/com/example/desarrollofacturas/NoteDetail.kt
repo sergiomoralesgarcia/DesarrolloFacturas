@@ -44,6 +44,7 @@ class NoteDetail : AppCompatActivity() {
         }
     }
 
+    //variables del popup
     private var popupTitle = ""
     private var popupText = ""
     private var popupButton = ""
@@ -55,57 +56,35 @@ class NoteDetail : AppCompatActivity() {
         setContentView(R.layout.activity_note_detail)
         overridePendingTransition(5, 5)
 
-        // Get the data
+        // Obtener los datos
         val bundle = intent.extras
         popupTitle = bundle?.getString("popuptitle", "Información") ?: ""
         popupText = bundle?.getString("popuptext", "Esta funcionalidad no está disponible") ?: ""
         popupButton = bundle?.getString("popupbtn", "Cerrar") ?: ""
         darkStatusBar = bundle?.getBoolean("darkstatusbar", false) ?: false
 
-        // Set the data
+        // Establecer los datos
         popup_window_title.text = popupTitle
         popup_window_text.text = popupText
         popup_window_button.text = popupButton
 
-        // Set the Status bar appearance for different API levels
-        if (Build.VERSION.SDK_INT in 19..20) {
-            setWindowFlag(this, true)
-        }
-        if (Build.VERSION.SDK_INT >= 19) {
-            window.decorView.systemUiVisibility =
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-        }
-        if (Build.VERSION.SDK_INT >= 21) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                // If you want dark status bar, set darkStatusBar to true
-                if (darkStatusBar) {
-                    this.window.decorView.systemUiVisibility =
-                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-                }
-                this.window.statusBarColor = Color.TRANSPARENT
-                setWindowFlag(this, false)
-            }
-        }
-
-        // Fade animation for the background of Popup Window
-        val alpha = 100 //between 0-255
-        val alphaColor = ColorUtils.setAlphaComponent(Color.parseColor("#000000"), alpha)
+        // Animación de fundido para el fondo de la ventana emergente
+        val alpha = 105
+        val alphaColor = ColorUtils.setAlphaComponent(Color.parseColor("#004CAF50"), alpha)
         val colorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), Color.TRANSPARENT, alphaColor)
-        colorAnimation.duration = 600 // milliseconds
+        colorAnimation.duration = 600 // milisegundos
         colorAnimation.addUpdateListener { animator ->
             popup_window_background.setBackgroundColor(animator.animatedValue as Int)
         }
         colorAnimation.start()
 
-
-        // Fade animation for the Popup Window
+        // Animación de fundido para la ventana emergente
         popup_window_view_with_border.alpha = 0f
-        popup_window_view_with_border.animate().alpha(1f).setDuration(600).setInterpolator(
+        popup_window_view_with_border.animate().alpha(1f).setDuration(1000).setInterpolator(
             DecelerateInterpolator()
         ).start()
 
-
-        // Close the Popup Window when you press the button
+        // Cierre de la ventana emergente cuando presione el botón
         popup_window_button.setOnClickListener {
             onBackPressed()
         }
@@ -117,30 +96,31 @@ class NoteDetail : AppCompatActivity() {
         if (on) {
             winParams.flags = winParams.flags or WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
         } else {
-            winParams.flags = winParams.flags and WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS.inv()
+            winParams.flags =
+                winParams.flags and WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS.inv()
         }
         win.attributes = winParams
     }
 
 
     override fun onBackPressed() {
-        // Fade animation for the background of Popup Window when you press the back button
-        val alpha = 100 // between 0-255
-        val alphaColor = ColorUtils.setAlphaComponent(Color.parseColor("#000000"), alpha)
+        // Animación de fundido para el fondo de la ventana emergente cuando presiona el botón Cerrar
+        val alpha = 100
+        val alphaColor = ColorUtils.setAlphaComponent(Color.parseColor("#FF488106"), alpha)
         val colorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), alphaColor, Color.TRANSPARENT)
-        colorAnimation.duration = 500 // milliseconds
+        colorAnimation.duration = 500 // milisegundos
         colorAnimation.addUpdateListener { animator ->
             popup_window_background.setBackgroundColor(
                 animator.animatedValue as Int
             )
         }
 
-        // Fade animation for the Popup Window when you press the back button
-        popup_window_view_with_border.animate().alpha(0f).setDuration(500).setInterpolator(
+        // Animación de fundido para la ventana emergente cuando presiona el botón Atrás
+        popup_window_view_with_border.animate().alpha(0f).setDuration(400).setInterpolator(
             DecelerateInterpolator()
         ).start()
 
-        // After animation finish, close the Activity
+        // Después de que termine la animación, cerramos la Actividad
         colorAnimation.addListener(object : AnimatorListenerAdapter() {
             override fun onAnimationEnd(animation: Animator) {
                 finish()
@@ -150,8 +130,8 @@ class NoteDetail : AppCompatActivity() {
         colorAnimation.start()
 
 
-
-        popup_window_button.setOnClickListener{
+        // Botón de cierre de la pestaña de información
+        popup_window_button.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
 
@@ -159,9 +139,6 @@ class NoteDetail : AppCompatActivity() {
             title = intent.getStringExtra(Constants.FACTURE_TITLE_KEY)
             date = intent.getStringExtra(Constants.FACTURE_DATE_KEY)
             content = intent.getStringExtra(Constants.FACTURE_CONTENT_KEY)
-
-
-
         }
     }
 

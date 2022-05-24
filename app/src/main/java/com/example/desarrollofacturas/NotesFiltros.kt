@@ -18,9 +18,6 @@ class NotesFiltros : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notes_filtros)
 
-
-
-
         // Botón de cancelar los filtros
         cancelButton.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
@@ -81,9 +78,6 @@ class NotesFiltros : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
         botonEliminar.setOnClickListener {
             startActivity(Intent(this, NotesFiltros::class.java))
         }
-
-
-
     }
 
     // importaciones del SeekBar

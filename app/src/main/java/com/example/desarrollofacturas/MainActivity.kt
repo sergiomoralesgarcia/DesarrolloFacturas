@@ -22,8 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        botonFactura.setOnClickListener{
+        botonFactura.setOnClickListener {
             startActivity(Intent(this, NotesFiltros::class.java))
         }
 
@@ -42,8 +41,4 @@ class MainActivity : AppCompatActivity() {
             facturas.add(Factura("$i Oct 2021", "Pendiente de pago", "2$i,52€"))
         }
     }
-
-   /* fun botonFactura(v: View?){
-        Toast.makeText(this, "este es el noton de facturas", Toast.LENGTH_SHORT).show()
-    } */
 }
