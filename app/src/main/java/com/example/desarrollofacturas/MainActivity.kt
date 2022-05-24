@@ -1,11 +1,15 @@
 package com.example.desarrollofacturas
 
+import android.app.Dialog
 import android.content.Intent
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.PopupWindow
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.view.menu.ActionMenuItemView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_notes_filtros.*
 import kotlin.concurrent.thread
@@ -17,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         botonFactura.setOnClickListener{
             startActivity(Intent(this, NotesFiltros::class.java))

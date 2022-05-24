@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">DesarrolloFacturas</string>
     <string name="IB">Filtrado</string>
-    <string-array name="rangeSliderValues">
-        <item>175</item>
-    </string-array>
 
 </resources>
