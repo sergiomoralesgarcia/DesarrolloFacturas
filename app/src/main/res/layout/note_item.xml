@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/itemContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    tools:context=".NotesAdapter"
+    android:background="?android:attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 Oct 2021"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.258" />
+
+    <TextView
+        android:id="@+id/descEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pendiente de pago"
+        android:textColor="#D5445E"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <TextView
+        android:id="@+id/importeOrdenacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21,57 €"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.818"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.507" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="360dp"
+        android:layout_height="2dp"
+        android:layout_marginBottom="4dp"
+        android:layout_weight="2"
+        android:background="#CCC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/flechagris"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+<!--
+<LinearLayout
+    android:id="@+id/itemContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="98"
+        android:orientation="vertical"
+        android:padding="6dp"
+        android:weightSum="100">
+
+        <TextView
+            android:id="@+id/fecha"
+            android:layout_width="213dp"
+            android:layout_height="4dp"
+            android:layout_weight="45"
+            android:gravity="bottom|center"
+            android:text="10 Oct 2021 "
+            android:textSize="28sp"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="55"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/descEstado"
+                android:layout_width="165dp"
+                android:layout_height="match_parent"
+                android:layout_weight="20"
+                android:gravity="center|top"
+                android:text="Pendiente de pago"
+                android:textColor="@color/design_default_color_error"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/importeOrdenacion"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_weight="80"
+                android:gravity="center|top"
+                android:text="21,57€"
+                android:textSize="23sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_weight="2"
+            android:background="#CCC" />
+
+    </LinearLayout>
+
+</LinearLayout>
+-->
+
