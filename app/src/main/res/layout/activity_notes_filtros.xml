@@ -26,6 +26,19 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.069" />
 
+        <ImageButton
+            android:id="@+id/cancelButton"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:background="?android:attr/selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.958"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.032"
+            app:srcCompat="@mipmap/icon_closer" />
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="212dp"
@@ -141,7 +154,7 @@
             app:layout_constraintHorizontal_bias="0.511"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.454" />
+            app:layout_constraintVertical_bias="0.444" />
 
         <TextView
             android:id="@+id/textView5"
@@ -184,21 +197,21 @@
             app:layout_constraintHorizontal_bias="0.954"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.329" />
+            app:layout_constraintVertical_bias="0.324" />
 
         <TextView
             android:id="@+id/cantidad1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1 €"
+            android:text="1€    -"
             android:textColor="#71B81D"
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintHorizontal_bias="0.442"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.397" />
+            app:layout_constraintVertical_bias="0.396" />
 
         <TextView
             android:id="@+id/cantidad2"
@@ -209,10 +222,25 @@
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.561"
+            app:layout_constraintHorizontal_bias="0.583"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.397" />
+            app:layout_constraintVertical_bias="0.396" />
+
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="€"
+            android:textColor="#71B81D"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.628"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.396" />
 
         <View
             android:id="@+id/view"
@@ -303,18 +331,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.772" />
 
-        <ImageButton
-            android:id="@+id/cancelButton"
-            android:layout_width="29dp"
-            android:layout_height="29dp"
-            android:background="?android:attr/selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.958"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.032"
-            app:srcCompat="@mipmap/icon_closer" />
 
         <Button
             android:id="@+id/botonAplicar"

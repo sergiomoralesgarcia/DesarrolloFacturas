@@ -67,7 +67,7 @@
                     android:text="Esta funcionalidad no está disponible"
                     android:textAlignment="center"
                     android:textColor="#1E1B1B"
-                    android:textSize="12sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@+id/popup_window_button"
                     app:layout_constraintEnd_toEndOf="parent"
