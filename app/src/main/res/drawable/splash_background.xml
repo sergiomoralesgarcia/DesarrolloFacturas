@@ -5,10 +5,10 @@
     <item android:drawable="@color/white"/>
 
     <item
-        android:top="300dp"
+        android:top="250dp"
         android:left="50dp"
         android:right="50dp"
-        android:bottom="300dp">
+        android:bottom="350dp">
         <bitmap android:src="@drawable/viewnext_logo_recortado"/>
     </item>
 </layer-list>
