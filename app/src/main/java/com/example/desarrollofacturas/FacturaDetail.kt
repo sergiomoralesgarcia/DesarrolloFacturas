@@ -8,17 +8,16 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.view.WindowManager
 import android.view.animation.DecelerateInterpolator
 import androidx.core.graphics.ColorUtils
-import kotlinx.android.synthetic.main.activity_note_detail.*
-import kotlinx.android.synthetic.main.activity_notes_filtros.*
+import kotlinx.android.synthetic.main.activity_factura_detail.*
+import kotlinx.android.synthetic.main.activity_facturas_filtros.*
 import kotlinx.android.synthetic.main.note_item.*
 
+// Constantes que me permiten transladar información
 class Constants {
     companion object {
         const val FACTURE_TITLE_KEY = "FACTURE_TITLE_KEY"
@@ -27,16 +26,17 @@ class Constants {
     }
 }
 
-class NoteDetail : AppCompatActivity() {
+class FacturaDetail : AppCompatActivity() {
 
     var title: String? = null
     var date: String? = null
     var content: String? = null
 
+    // Iniciar la vista
     companion object {
         @JvmStatic
         fun start(context: Context, title: String, creationDate: String, content: String) {
-            val starter = Intent(context, NoteDetail::class.java)
+            val starter = Intent(context, FacturaDetail::class.java)
                 .putExtra(Constants.FACTURE_TITLE_KEY, title)
                 .putExtra(Constants.FACTURE_DATE_KEY, creationDate)
                 .putExtra(Constants.FACTURE_CONTENT_KEY, content)
@@ -53,7 +53,7 @@ class NoteDetail : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_note_detail)
+        setContentView(R.layout.activity_factura_detail)
         overridePendingTransition(5, 5)
 
         // Obtener los datos
@@ -135,6 +135,7 @@ class NoteDetail : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         }
 
+        // si existe el intent, asigna los valores a las variables
         if (intent != null) {
             title = intent.getStringExtra(Constants.FACTURE_TITLE_KEY)
             date = intent.getStringExtra(Constants.FACTURE_DATE_KEY)

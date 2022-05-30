@@ -5,18 +5,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.SeekBar
-import android.widget.SeekBar.OnSeekBarChangeListener
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
-import com.google.android.material.slider.RangeSlider
-import kotlinx.android.synthetic.main.activity_notes_filtros.*
-import java.io.RandomAccessFile
+import kotlinx.android.synthetic.main.activity_facturas_filtros.*
 import java.util.*
 
-class NotesFiltros : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
+class FacturasFiltros : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_notes_filtros)
+        setContentView(R.layout.activity_facturas_filtros)
 
         // Botón de cancelar los filtros
         cancelButton.setOnClickListener {
@@ -76,7 +72,7 @@ class NotesFiltros : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
 
         // Botón de eliminar los filtros
         botonEliminar.setOnClickListener {
-            startActivity(Intent(this, NotesFiltros::class.java))
+            startActivity(Intent(this, FacturasFiltros::class.java))
         }
     }
 

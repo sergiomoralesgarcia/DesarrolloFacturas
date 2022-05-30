@@ -1,18 +1,9 @@
 package com.example.desarrollofacturas
 
-import android.app.Dialog
 import android.content.Intent
-import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.PopupWindow
-import android.widget.TextView
-import android.widget.Toast
-import androidx.appcompat.view.menu.ActionMenuItemView
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_notes_filtros.*
-import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
     var facturas: ArrayList<Factura> = ArrayList()
@@ -22,20 +13,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // botón para entrar en los filtros
         botonFactura.setOnClickListener {
-            startActivity(Intent(this, NotesFiltros::class.java))
+            startActivity(Intent(this, FacturasFiltros::class.java))
         }
 
         initData()
         initViews()
     }
 
+
     private fun initViews() {
         facturasList.setHasFixedSize(true)
-        facturasList.adapter = NotesAdapter(this.facturas, this)
+        facturasList.adapter = FacturasAdapter(this.facturas, this)
 
     }
 
+    // Generar facturas
     private fun initData() {
         for (i in 1..10) {
             facturas.add(Factura("$i Oct 2021", "Pendiente de pago", "2$i,52€"))

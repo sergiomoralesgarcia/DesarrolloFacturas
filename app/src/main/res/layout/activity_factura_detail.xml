@@ -8,7 +8,7 @@
     android:layout_height="180dp"
     android:layout_gravity="center"
     android:background="@drawable/cerclebackground"
-    tools:context=".NoteDetail">
+    tools:context=".FacturaDetail">
 
     <ImageView
         android:layout_width="252dp"
@@ -112,50 +112,3 @@
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <!--
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="100"
-        android:orientation="vertical"
-        android:padding="16dp"
-        tools:context=".NoteDetail">
-
-
-        <TextView
-            android:id="@+id/titulo"
-            android:layout_width="279dp"
-            android:layout_height="50dp"
-            android:layout_weight="15"
-            android:gravity="center|bottom"
-            android:text="Información"
-            android:textSize="40sp"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/contenido"
-            android:layout_width="387dp"
-            android:layout_height="25dp"
-            android:layout_weight="5"
-            android:gravity="center"
-            android:text="Esta funcionalidad no está disponible"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/cierre"
-            android:layout_width="369dp"
-            android:layout_height="0dp"
-            android:layout_weight="80"
-            android:paddingLeft="33dp"
-            android:paddingTop="8dp"
-            android:text="Cerrar"
-            android:textSize="18sp" />
-
-    </LinearLayout>
-    -->
-

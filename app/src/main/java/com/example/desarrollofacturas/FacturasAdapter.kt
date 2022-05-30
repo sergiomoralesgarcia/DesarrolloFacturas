@@ -10,12 +10,12 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.example.desarrollofacturas.NoteDetail.Companion.start
+import com.example.desarrollofacturas.FacturaDetail.Companion.start
 
 data class Factura(val title: String, val date: String, val content: String)
 
-class NotesAdapter(facturas: ArrayList<Factura>, context: Context) :
-    RecyclerView.Adapter<NotesAdapter.NotesViewHolder>() {
+class FacturasAdapter(facturas: ArrayList<Factura>, context: Context) :
+    RecyclerView.Adapter<FacturasAdapter.NotesViewHolder>() {
 
     val facturas = facturas
     val context = context
@@ -32,6 +32,8 @@ class NotesAdapter(facturas: ArrayList<Factura>, context: Context) :
         holder.bind(this.facturas.get(position), context)
     }
 
+
+    // Asignación valores note_item
     class NotesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var container: ConstraintLayout? = null
         var title: TextView? = null

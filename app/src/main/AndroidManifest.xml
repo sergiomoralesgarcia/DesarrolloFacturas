@@ -22,10 +22,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NotesFiltros"
+            android:name=".FacturasFiltros"
             android:exported="false" />
         <activity
-            android:name=".NoteDetail"
+            android:name=".FacturaDetail"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
