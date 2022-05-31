@@ -15,7 +15,7 @@ import android.view.animation.DecelerateInterpolator
 import androidx.core.graphics.ColorUtils
 import kotlinx.android.synthetic.main.activity_factura_detail.*
 import kotlinx.android.synthetic.main.activity_facturas_filtros.*
-import kotlinx.android.synthetic.main.note_item.*
+import kotlinx.android.synthetic.main.factura_item.*
 
 // Constantes que me permiten transladar información
 class Constants {
@@ -29,17 +29,17 @@ class Constants {
 class FacturaDetail : AppCompatActivity() {
 
     var title: String? = null
-    var date: String? = null
     var content: String? = null
+    var close: String? = null
 
     // Iniciar la vista
     companion object {
         @JvmStatic
-        fun start(context: Context, title: String, creationDate: String, content: String) {
+        fun start(context: Context, title: String, content: String, close: String) {
             val starter = Intent(context, FacturaDetail::class.java)
                 .putExtra(Constants.FACTURE_TITLE_KEY, title)
-                .putExtra(Constants.FACTURE_DATE_KEY, creationDate)
-                .putExtra(Constants.FACTURE_CONTENT_KEY, content)
+                .putExtra(Constants.FACTURE_DATE_KEY, content)
+                .putExtra(Constants.FACTURE_CONTENT_KEY, close)
             context.startActivity(starter)
         }
     }
@@ -138,8 +138,8 @@ class FacturaDetail : AppCompatActivity() {
         // si existe el intent, asigna los valores a las variables
         if (intent != null) {
             title = intent.getStringExtra(Constants.FACTURE_TITLE_KEY)
-            date = intent.getStringExtra(Constants.FACTURE_DATE_KEY)
-            content = intent.getStringExtra(Constants.FACTURE_CONTENT_KEY)
+            content = intent.getStringExtra(Constants.FACTURE_DATE_KEY)
+            close = intent.getStringExtra(Constants.FACTURE_CONTENT_KEY)
         }
     }
 

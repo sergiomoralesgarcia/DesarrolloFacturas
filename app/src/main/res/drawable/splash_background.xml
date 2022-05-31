@@ -5,9 +5,9 @@
     <item android:drawable="@color/white"/>
 
     <item
-        android:top="250dp"
-        android:left="50dp"
-        android:right="50dp"
+        android:top="270dp"
+        android:left="60dp"
+        android:right="60dp"
         android:bottom="350dp">
         <bitmap android:src="@drawable/viewnext_logo_recortado"/>
     </item>
