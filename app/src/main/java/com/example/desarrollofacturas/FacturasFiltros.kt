@@ -14,6 +14,7 @@ class FacturasFiltros : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_facturas_filtros)
 
+
         // Botón de cancelar los filtros
         cancelButton.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))

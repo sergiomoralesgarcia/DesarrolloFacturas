@@ -9,9 +9,9 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.desarrollofacturas.FacturaDetail.Companion.start
 
-data class Factura(val date: String, val title: String, val content: String)
+data class Facturas(val fecha: String, val descEstado: String, val importeOrdenacion: String)
 
-class FacturasAdapter(facturas: ArrayList<Factura>, context: Context) :
+class FacturasAdapter(facturas: ArrayList<Facturas>, context: Context) :
     RecyclerView.Adapter<FacturasAdapter.FacturasViewHolder>() {
 
     val facturas = facturas
@@ -33,23 +33,23 @@ class FacturasAdapter(facturas: ArrayList<Factura>, context: Context) :
     // Asignación valores factura_item
     class FacturasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var container: ConstraintLayout? = null
-        var date: TextView? = null
-        var title: TextView? = null
-        var content: TextView? = null
+        var fecha: TextView? = null
+        var descEstado: TextView? = null
+        var importeOrdenacion: TextView? = null
 
         init {
             container = itemView.findViewById(R.id.itemContainer)
-            date = itemView.findViewById(R.id.fecha)
-            title = itemView.findViewById(R.id.descEstado)
-            content = itemView.findViewById(R.id.importeOrdenacion)
+            fecha = itemView.findViewById(R.id.fecha)
+            descEstado = itemView.findViewById(R.id.descEstado)
+            importeOrdenacion = itemView.findViewById(R.id.importeOrdenacion)
         }
 
-        fun bind(factura: Factura, context: Context) {
-            date?.text = factura.date
-            title?.text = factura.title
-            content?.text = factura.content
+        fun bind(facturas: Facturas, context: Context) {
+            fecha?.text = facturas.fecha
+            descEstado?.text = facturas.descEstado
+            importeOrdenacion?.text = facturas.importeOrdenacion
             container?.setOnClickListener {
-                start(context, factura.date, factura.title, factura.content)
+                start(context, facturas.fecha, facturas.descEstado, facturas.importeOrdenacion)
             }
         }
     }
