@@ -24,11 +24,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, FacturasFiltros::class.java))
         }
 
-       // initData()
+        initData()
         initViews()
 
         val facturasApi = RetrofitHelper.getInstance().create(FacturasApi::class.java)
-        // launching a new coroutine
+        // lanzando la nueva rutina
         GlobalScope.launch {
             val factura = facturasApi.getFacturas()
             if (factura != null)
@@ -39,15 +39,15 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun initViews() {
-        facturasList.setHasFixedSize(true)
-        facturasList.adapter = FacturasAdapter(this.facturas, this)
+        FacturaList.setHasFixedSize(true)
+        FacturaList.adapter = FacturasAdapter(this.facturas, this)
 
     }
 
     // Generar facturas
-    /* private fun initData() {
+    private fun initData() {
         for (i in 1..10) {
             facturas.add(Facturas("$i Oct 2021", "Pendiente de pago", "2$i,52€"))
         }
-    } */
+    }
 }
