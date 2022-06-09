@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_factura_detail.*
 import kotlinx.android.synthetic.main.activity_facturas_filtros.*
 import kotlinx.android.synthetic.main.factura_item.*
 
-// Constantes que me permiten transladar información
+// Constantes que permiten transladar información
 class Constants {
     companion object {
         const val FACTURE_TITLE_KEY = "FACTURE_TITLE_KEY"
